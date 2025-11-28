@@ -77,14 +77,6 @@ Trains with data augmentations (resize, horizontal flip, normalization) for robu
 <img width="1907" height="1079" alt="image" src="https://github.com/user-attachments/assets/71b1e92b-1512-4993-9ed6-8a49329b786f" />
 
 
-## Results:
-
-Accurately classifies fruits and vegetables as fresh or spoiled in real-time.
-
-Provides clear feedback to reduce human error in food inspection.
-
-Robust to different lighting and angles in image uploads.
-
 ## Impact:
 
 Food Safety: Prevents consumption of spoiled or unsafe food.
@@ -95,8 +87,16 @@ Automation: Reduces the need for manual inspection.
 
 Innovation in AI Applications: Demonstrates practical use of ViT and deep learning in everyday life.
 
-Articles Published / References:
 
+## Results:
+
+Accurately classifies fruits and vegetables as fresh or spoiled in real-time.
+
+Provides clear feedback to reduce human error in food inspection.
+
+Robust to different lighting and angles in image uploads.
+
+## Articles Published / References:
 “Real-Time Food Spoilage Detection Using Deep Learning” – International Journal of Computer Applications, 2021.
 
 “Automatic Food Freshness Monitoring Using Computer Vision” – IEEE Access, 2020.
