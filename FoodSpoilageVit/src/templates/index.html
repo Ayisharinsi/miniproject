@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Food Spoilage Detection</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #f0f4f8, #d9e6f2);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        h1 {
+            margin-top: 40px;
+            font-size: 2.5rem;
+            text-align: center;
+            background: linear-gradient(to right, #ff6e7f, #bfe9ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 40px;
+            margin-top: 50px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            text-align: center;
+            width: 350px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 45px rgba(0,0,0,0.15);
+        }
+
+        input[type="file"] {
+            margin-top: 20px;
+            padding: 10px;
+            width: 100%;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 10px;
+            background: linear-gradient(90deg, #ff6e7f, #bfe9ff);
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+
+        button:hover {
+            background: linear-gradient(90deg, #bfe9ff, #ff6e7f);
+            transform: scale(1.05);
+        }
+
+        .prediction {
+            margin-top: 25px;
+            font-size: 22px;
+            font-weight: 700;
+            display: inline-block;
+            padding: 12px 25px;
+            border-radius: 30px;
+            transition: transform 0.2s ease;
+        }
+
+        .prediction.fresh {
+            background-color: #28a74533;
+            color: #28a745;
+            border: 2px solid #28a745;
+        }
+
+        .prediction.spoiled {
+            background-color: #dc354533;
+            color: #dc3545;
+            border: 2px solid #dc3545;
+        }
+
+        .uploaded-img {
+            margin-top: 20px;
+            max-width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        @media (max-width: 800px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Food Spoilage Detection</h1>
+
+    <div class="container">
+        <!-- Upload Card -->
+        <div class="card">
+            <form method="post" enctype="multipart/form-data">
+                <h2>Upload an Image</h2>
+                <input type="file" name="image" accept="image/*" required>
+                <button type="submit">Predict</button>
+            </form>
+        </div>
+
+        <!-- Result Card -->
+        {% if result %}
+        <div class="card">
+            <h2>Prediction Result</h2>
+            <div class="prediction {% if result=='fresh' %}fresh{% else %}spoiled{% endif %}">
+                {{ result|capitalize }}
+            </div>
+            <img src="{{ filename }}" class="uploaded-img">
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
