@@ -70,11 +70,13 @@ Model can be retrained using additional labeled datasets for improved accuracy.
 Trains with data augmentations (resize, horizontal flip, normalization) for robustness.
 
 ## Output:
-<img width="1905" height="1079" alt="image" src="https://github.com/user-attachments/assets/8308fead-6ec3-437e-a1f5-e7dc50f0cbfa" />
 
-<img width="1918" height="1079" alt="image" src="https://github.com/user-attachments/assets/a07686ad-6b9d-404f-8464-ce75537d4440" />
 
-<img width="1907" height="1079" alt="image" src="https://github.com/user-attachments/assets/71b1e92b-1512-4993-9ed6-8a49329b786f" />
+![WhatsApp Image 2025-12-25 at 8 57 48 PM (2)](https://github.com/user-attachments/assets/30c9cc84-7283-4350-8f42-9cbb3fe16689)
+![WhatsApp Image 2025-12-25 at 8 57 48 PM (1)](https://github.com/user-attachments/assets/89a3dfe5-350d-4188-b03c-1f5e35ad008a)
+![WhatsApp Image 2025-12-25 at 8 57 48 PM](https://github.com/user-attachments/assets/85e57c66-5904-4812-8e59-ba7d5753bc18)
+![WhatsApp Image 2025-12-25 at 8 57 49 PM](https://github.com/user-attachments/assets/25f14eae-a94c-4681-a1ce-41d66de24f02)
+
 
 
 ## Impact:
